@@ -1,0 +1,63 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<section>
+    <div class="s1">
+        <div class="s1-bg">
+            <img src="~/Content/Images/Global/images.png" />
+        </div>
+        <div class="s1-content ">
+            <h2>Premium Car Rental in New York </h2> 
+            <p>Premium Car Rental in New York Premium Car Rental in New York Premium Car Rental in New York</p>
+           
+          
+
+        </div>
+
+    </div>
+</section>
+<section>
+    <div class="s2 container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 ">
+                <h2> Offre Spéciales </h2>
+
+            </div>
+        </div>
+        <div class="row">
+
+            @if (Model != null)
+            {
+                foreach (ProjetASP.net.Models.Voiture_info item in Model)
+                {
+                   
+                        @Html.Partial("_VoitureCard", item)
+                   
+                }
+            }
+            else
+            {
+                <h3>vide</h3>
+            }
+
+
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="s3">
+       
+        <div class="s3-content">
+            <h2>Lorem ipsum dolor consectetur</h2>
+            <p>
+          
+            </p>
+            <div class="s3-link">
+                <a href="~/Home/Contact" class="btn btn-1">Contatez nous</a>
+                <a href="~/Home/About" class="btn btn-2">A propos</a>
+            </div>
+        </div>
+    </div>
+</section>
